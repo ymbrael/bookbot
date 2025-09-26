@@ -1,3 +1,5 @@
+from stats import get_word_count
+
 def main():
     book_path = "books/frankenstein.txt"
     text = get_book_text(book_path)
@@ -11,16 +13,11 @@ def main():
     ltr_count.sort(reverse=True, key=sort_on)
 
     print(f"- Report of {book_path} -")
-    print(f"{word_count} words counted in the document")
+    print(f"Found {word_count} total words")
     print("")
     for l in range(0, len(ltr_count)):
         print(f"There are {ltr_count[l]['count']} instances of the letter '{ltr_count[l]['letter']}'")
     print("- Close Report -")
-
-
-def get_word_count(text):
-    words = text.split()
-    return len(words)
 
 
 def get_book_text(path):

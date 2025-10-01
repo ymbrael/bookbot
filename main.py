@@ -21,7 +21,7 @@ def main():
     print(f"Found {word_count} total words")
     print("")
     for l in range(0, len(ltr_count)):
-        print(f"There are {ltr_count[l]['count']} instances of the letter '{ltr_count[l]['letter']}'")
+        print(f"{ltr_count[l]['letter']}: {ltr_count[l]['count']}")
     print("- Close Report -")
 
 
